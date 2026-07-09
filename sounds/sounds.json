@@ -1,0 +1,72 @@
+[
+  {
+    "id": "c9779e03e70546c2b5ab89f0b37cf194",
+    "name": "Cheers",
+    "file": "cheers.norm.wav"
+  },
+  {
+    "id": "875dda7204604836b199f20b2607ce3a",
+    "name": "Applause",
+    "file": "applause.norm.wav"
+  },
+  {
+    "id": "6c178b359fa846c8a0ccfbeacf2978d6",
+    "name": "Airhorn",
+    "file": "airhorn.norm.wav"
+  },
+  {
+    "id": "d18c2b92dd6c4149830f346f77fa39f3",
+    "name": "Indian Song",
+    "file": "indian-song.norm.wav"
+  },
+  {
+    "id": "8dfa4588d66a43e7856cc19da72ce879",
+    "name": "Faaah",
+    "file": "faaah.norm.wav"
+  },
+  {
+    "id": "ddf099b61a7c461aa6e5e3f873606827",
+    "name": "Are Baap Re",
+    "file": "are-baap-re-yaad-aya.norm.wav"
+  },
+  {
+    "id": "826d9480d0684e4d94c1e4b8cb8c8010",
+    "name": "Chicken Screaming",
+    "file": "chicken-on-tree-screaming.norm.wav"
+  },
+  {
+    "id": "eba8a5a372a14e98aa71bb191aceaf24",
+    "name": "Aayein",
+    "file": "aayein-meme.norm.wav"
+  },
+  {
+    "id": "e82f60d18dd5400cade4f1a806d2484e",
+    "name": "Maa Tari Oo Bhai",
+    "file": "maa-tari-oo-bhai.norm.wav"
+  },
+  {
+    "id": "25d550a3a393400680786c4f7793702b",
+    "name": "Dexter",
+    "file": "dexter-meme.norm.wav"
+  },
+  {
+    "id": "c6ebc8521edd4f229b58b20bae1e3d2f",
+    "name": "Chaloo",
+    "file": "chaloo.norm.wav"
+  },
+  {
+    "id": "4b7819d4b4da44c5aa62bb048c334456",
+    "name": "Rom Rom Bhaiyo",
+    "file": "rom-rom-bhaiyo.norm.wav"
+  },
+  {
+    "id": "a7e166f131554dbea1b2508052c0d2a4",
+    "name": "CID Bkchodi",
+    "file": "bkchodi-mt-kar-cid.norm.wav"
+  },
+  {
+    "id": "03c715198379491994be9fd482d17913",
+    "name": "Khel Khatam",
+    "file": "khel-khatam-beta.norm.wav"
+  }
+]

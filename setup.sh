@@ -64,6 +64,16 @@ pactl load-module module-remap-source \
   source_properties=device.description=MeetCheers-Mic >/dev/null
 echo "• Created virtual mic 'MeetCheers-Mic' (your voice + sounds)."
 
+# --- 5b. also play sounds on YOUR speakers so you can hear them too ----------
+# (loops only the soundboard — NOT your mic — to your default output, so you
+#  hear the clips but never echo your own voice.)
+DEFAULT_SINK="$(pactl get-default-sink 2>/dev/null || true)"
+if [ -n "${DEFAULT_SINK}" ] && [ "${DEFAULT_SINK}" != "${SINK_NAME}" ] && [ "${DEFAULT_SINK}" != "${MIX_SINK}" ]; then
+  pactl load-module module-loopback \
+    source="${SINK_NAME}.monitor" sink="${DEFAULT_SINK}" latency_msec=40 >/dev/null
+  echo "• You will also hear clips on your speakers (${DEFAULT_SINK})."
+fi
+
 # --- 6. starter sounds (self-contained; generated, no downloads) -------------
 if command -v python3 >/dev/null 2>&1; then
   python3 "$(dirname "$0")/scripts/make_starter_sounds.py"

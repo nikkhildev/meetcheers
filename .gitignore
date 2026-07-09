@@ -1,9 +1,5 @@
 __pycache__/
 *.pyc
-# User-added sounds and the live manifest are local state, not source.
-sounds/*.wav
-sounds/*.mp3
-sounds/*.ogg
-sounds/*.flac
-sounds/*.oga
-sounds/sounds.json
+.orig_backup/
+# The curated sound pack (normalized WAVs) + manifest SHIP with the project so
+# teammates get working buttons immediately. User-added extras also live here.
