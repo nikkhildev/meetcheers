@@ -23,9 +23,13 @@ at the OS audio layer, not in the browser.
 # 3. in your meeting app, set the microphone to:  MeetCheers-Mic
 ```
 
-That's it. Click a button and your whole meeting hears it.
+That's it. Click a button and your whole meeting hears it — and **MeetCheers-Mic
+carries your voice too**, so you don't need to switch mics to talk.
 
 > **After a reboot/logout** the virtual devices are gone — just run `./setup.sh` again.
+
+> **Muffled sounds?** Turn OFF your meeting app's *noise cancellation* — it treats
+> clips/music as background noise and suppresses them.
 
 ## Using it
 
@@ -35,10 +39,19 @@ That's it. Click a button and your whole meeting hears it.
 - **Delete:** right-click a button.
 - **Routing status** is shown at the bottom. If it says "run ./setup.sh", do that.
 
+## Your voice + the sounds (how the mic works)
+
+`setup.sh` builds **one** virtual mic — `MeetCheers-Mic` — that mixes:
+
+- your **real microphone** (people hear you talk normally), and
+- the **soundboard** (people hear the clips you click).
+
+So you select `MeetCheers-Mic` once and never switch back and forth.
+
 ## Hearing the clips yourself (optional)
 
-By default the sound goes only to the meeting (the virtual mic). To also hear it on
-your own speakers, add a loopback while the app is running:
+The mic goes to the meeting, not your speakers. To also hear clips locally, add a
+loopback while the app is running:
 
 ```bash
 pactl load-module module-loopback source=meetcheers.monitor
