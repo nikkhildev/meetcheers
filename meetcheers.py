@@ -7,7 +7,9 @@ Setup (once): ./setup.sh
 """
 from __future__ import annotations
 
+import subprocess
 import tkinter as tk
+from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 import library
@@ -15,6 +17,17 @@ import player
 import routing
 
 COLS = 3  # buttons per row
+APP_DIR = Path(__file__).resolve().parent
+
+
+def ensure_routing() -> None:
+    """Run setup.sh if the virtual mic is missing (e.g. after a reboot)."""
+    if routing.source_exists():
+        return
+    setup = APP_DIR / "setup.sh"
+    if setup.exists():
+        subprocess.run(["bash", str(setup)], cwd=str(APP_DIR),
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
 class App:
@@ -124,6 +137,7 @@ class App:
 
 
 def main() -> None:
+    ensure_routing()  # auto-create the virtual mic if a reboot wiped it
     root = tk.Tk()
     App(root)
     root.mainloop()

@@ -11,17 +11,18 @@ at the OS audio layer, not in the browser.
 - **Python 3.8+** with **Tkinter** (`python3-tk`)
 - An audio player: `pw-play` (PipeWire) or `paplay` (PulseAudio)
 
-## Install (3 steps)
+## Install (once — then just click the icon)
 
 ```bash
-# 1. one-time: create the virtual sink + mic and generate starter sounds
-./setup.sh
-
-# 2. launch the app
-./run.sh
-
-# 3. in your meeting app, set the microphone to:  MeetCheers-Mic
+sudo apt install python3-tk    # one-time dependency
+./install.sh                   # adds a clickable "MeetCheers" app icon
 ```
+
+Then **search "MeetCheers" in your apps menu and click it.** The app auto-creates
+the virtual mic on launch (even after a reboot), so you never touch the terminal
+again. In your meeting app, set the microphone to **MeetCheers-Mic**.
+
+_(No icon? You can still run `./run.sh` — it does the same auto-setup.)_
 
 That's it. Click a button and your whole meeting hears it — and **MeetCheers-Mic
 carries your voice too**, so you don't need to switch mics to talk.
